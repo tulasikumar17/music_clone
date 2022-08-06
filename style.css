@@ -49,6 +49,9 @@ body {
     justify-content: center;
     flex-direction: column;
 }
+.right {
+    height: 130%;
+}
 .left p{
     display: inline;
     padding: 5px 5px;
@@ -88,6 +91,7 @@ input[type="range"]{
     outline: none;
     height: 2px;
     margin: 0px 15px;
+    background-color: #FF8A65;
 }
 
 input[type="range"]::-webkit-slider-thumb{
@@ -97,10 +101,10 @@ input[type="range"]::-webkit-slider-thumb{
     background: orange;
     border-radius: 50%;
     cursor: pointer;
+    
 }
 
 .right input[type="range"]{
-    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -108,7 +112,8 @@ input[type="range"]::-webkit-slider-thumb{
     left: -34%;
     top: 30px;
     width: 150%;
-}
+    cursor: pointer;
+} 
 
 .left .volume{
     position: absolute;
@@ -176,6 +181,7 @@ input[type="range"]::-webkit-slider-thumb{
     justify-content: center;
     top: 30%;
     cursor: default;
+    color: white;
 }
 
 #artist {
@@ -184,6 +190,7 @@ input[type="range"]::-webkit-slider-thumb{
     position: absolute;
     top: 35%;
     cursor: default;
+    color: white;
 }
 
 #present {
@@ -192,12 +199,34 @@ input[type="range"]::-webkit-slider-thumb{
     top: 0%;
     right: -10%;
     cursor: default;
+    color: white;
 }
 
 #duration_slider {
     width: 0%;
 }
 
+#show_duration{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: -7%;
+    left: -14vh;
+    color: white;
+    cursor: pointer;
+}
+
+#total_duration {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: -4%;
+    left: 15vh;
+    color: white;
+    cursor: pointer;
+}
 #play {
     background: #FF8A65;
 }
@@ -207,4 +236,55 @@ input[type="range"]::-webkit-slider-thumb{
 
 .right img:before{
     color: #fff;
+}
+
+.extra {
+    position: relative;
+    display: flex;
+    top: 27px;
+    left:16vh;
+    border-radius: 50%;
+    cursor: pointer;
+    background: rgb(255, 255, 255,.1);
+}
+
+#forward{
+    height: 15px;
+    width: 15px;
+}
+
+.ret{
+    left: -100px;
+    top: -1vh;
+}
+#backward{
+    height: 15px;
+    width: 15px;
+}
+#repeat{
+    height: 15px;
+    width: 15px;
+}
+.ret1{
+    position: relative;
+    display: flex;
+    top: 27px;
+    left:16vh;
+    border-radius: 50%;
+    cursor: pointer;
+    background: rgb(255, 255, 255,.1);
+    left: -15px
+
+}
+#Music{
+    position: absolute;
+    top: 10px;
+    left: -80px;
+    text-align: center;
+    top: -200px;
+    font-size: 300px;
+    color: rgba(208, 225, 109, 0.633);
+    text-transform: capitalize;
+    cursor: default;
+    
 }
