@@ -149,14 +149,16 @@ function change_duration(){
 }
 //volume derease on key value
 function volume_dec(){
-    p=recent_volume.value;
-    recent_volume.value=p-5;
+    recent_volume.value-=5
     volume_show.innerText=recent_volume.value;
-    track.volume=recent_volume.value;
+    track.volume=recent_volume.value/100;
 }
 //volume increase on key value
 function volume_inc(){
-    //o.....
+    recent_volume.value+=5;
+    volume_show.innerText=recent_volume.value;
+    track.volume=(recent_volume.value)/100;
+    console.log(recent_volume.value,track.volume)
 }
 //duration update on slider bar
 track.addEventListener("timeupdate",()=>{
@@ -170,7 +172,7 @@ track.addEventListener("timeupdate",()=>{
     else{
         document.querySelector("#total_duration").innerText="0"+Math.floor(tp/60)+":"+Math.floor(tp%60);
     }
-    if(q%60<=9){
+    if(q%60<=9){132
         document.querySelector("#show_duration").innerText="0"+Math.floor(q/60)+":0"+Math.floor(q%60);
     }else{
         document.querySelector("#show_duration").innerText="0"+Math.floor(q/60)+":"+Math.floor(q%60);
