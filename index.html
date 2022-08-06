@@ -13,8 +13,7 @@
         <p id="logo">
             <img src="music.png" alt="">Music
         </p>
-    
-
+        <p id="Musi"></p>
     
         <!--left part-->
         <div class="left">
@@ -24,7 +23,7 @@
             
             <p id="volume_show">100</p>
 
-            <img src="vol_inc.webp" id="volume_icon" onclick="mute_sound()">
+            <img src="vol_inc.webp" id="volume_icon">
             <input type="range" min="0" max="100" value="100" onchange="volume_change()" id="vol">
         </div>
         </div>
@@ -33,23 +32,30 @@
         <div class="right">
             <div class="show_song_no">
                 <p id="present">1</p>
-
             </div>
             <p id="title">title.mp3</p>
             <p id="artist">Artist name</p>
-            
+            <!--Navigation fo songs-->
             <div class="middle">
                 <button onclick="previous_song()" id="pre"><img src="previous_but.png"></button>
                 <button onclick="justplay()" id="play"><img id="play1" src="play_but.png"></button>
                 <button onclick="next_song()" id="next"><img src="next_but.png"></i></button>
             </div>
-
+            <!--duration slider bar-->
             <div class="duration">
                 <input type="range" min="0" max="100" value="0" id="duraton_slider" onchange="change_duration()">
             </div>
 
+            <!--song durations-->
+            <div id="show_duration">00:00</div>
+            <div id="total_duration">00:00</div>
+            <button class="ret1"><img id="repeat" src="repeat_but.png" onclick="shuffle()"></button>
+            <button class="extra"><img id="forward" src="forward_but.png" onclick="forward()"></button>
+            <button class="extra ret"><img id="backward" src="backward_but.png" onclick="backward()"></button>
+
         </div>
+        
     </div>
-    <script src="/script1.js"></script>
+    <script src="C:\Users\redde\OneDrive\Desktop\H_site2\script1.js"></script>
 </body>
 </html>
