@@ -179,7 +179,7 @@ input[type="range"]::-webkit-slider-thumb{
     position: absolute;
     align-items: center;
     justify-content: center;
-    top: 30%;
+    top: 25%;
     cursor: default;
     color: white;
 }
@@ -188,7 +188,7 @@ input[type="range"]::-webkit-slider-thumb{
     font-size: 15px;
     text-transform: capitalize;
     position: absolute;
-    top: 35%;
+    top: 30%;
     cursor: default;
     color: white;
 }
