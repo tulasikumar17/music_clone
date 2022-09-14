@@ -50,10 +50,13 @@ let All_song=[
     {Name: "The monster", Path: "songs/26.mp3",imgPath: "covers/5.jpg"},
     {Name: "Brindavanam", Path: "songs/27.mp3",imgPath: "covers/1.jpg"},
     {Name: "Yaad piya ki aane lagi", Path: "songs/28.mp3",imgPath: "covers/1.jpg"},
-    {Name: "manike mage hithe", Path: "songs/29.mp3",imgPath: "covers/4.jpg"}
+    {Name: "manike mage hithe", Path: "songs/29.mp3",imgPath: "covers/4.jpg"},
+    {Name: "Ponmagala vandhal", Path: "songs/30.mp3",imgPath: "covers/1.jpg"},
+    {Name: "Ra Ra Ready", Path: "songs/31.mp3",imgPath: "covers/1.jpg"},
+    {Name: "Gulebakavali", Path: "songs/33.mp3",imgPath: "covers/2.jpg"}
 ];
 let naa_song=[
-    {Name: "la la", Path: "songs/11.mp3" ,imgPath: "covers/1.jpg"}
+    {Name: "la la", Path: "songs/32.mp3" ,imgPath: "covers/1.jpg"}
 ]
 //load track
 function load_track(index_no){
@@ -118,7 +121,8 @@ function next_song(){
     if(index_no>=(All_song.length-1)){
         if(rep_val=="shuffle"){
             random_song()
-        }else{
+        }
+        else{
         index_no=0;
         }
         present.innerText=""+(index_no+1)+"";
@@ -128,7 +132,8 @@ function next_song(){
     else{
         if(rep_val=="shuffle"){
             random_song()
-        }else{
+        }
+        else{
         index_no+=1;
         }
         present.innerText=""+(index_no+1)+"";
@@ -178,7 +183,10 @@ track.addEventListener("timeupdate",()=>{
         document.querySelector("#show_duration").innerText="0"+Math.floor(q/60)+":"+Math.floor(q%60);
     }
     if(track.currentTime==track.duration){
-        next_song()
+        if(rep_val=="single"){
+            index_no-=1;
+        }
+        next_song();
     }
 })
 //mute or unmute
@@ -260,9 +268,14 @@ function shuffle(){
     if(rep_val=="repeat"){
         rep_val="shuffle";
         rep.src="shuffle_but.png";
-    }else{
+    }
+    else if(rep_val=="shuffle"){
+        rep_val="single";
+        rep.src="single_but.png";
+    }
+    else{
         rep_val="repeat";
-        rep.src="repeat_but.png"
+        rep.src="repeat_but.png";
     }
     
 }
